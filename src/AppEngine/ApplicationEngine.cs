@@ -10,7 +10,7 @@ namespace AB.AppEngine
         private readonly IList<IRequestSink> _requestSinks = new List<IRequestSink>();
         private readonly IList<object> _workers = new SynchronizedCollection<object>();
 
-        public TResponse Execute<TRequest, TResponse>(IRequest<TRequest, TResponse> request) where TResponse : new()
+        public TResponse Execute<TRequest, TResponse>(IRequest<TRequest, TResponse> request)
         {
             NotifyRequestSinks(request);
 
@@ -18,7 +18,7 @@ namespace AB.AppEngine
 
         }
 
-        private TResponse ExecuteRequest<TRequest, TResponse>(IRequest<TRequest, TResponse> request) where TResponse : new()
+        private TResponse ExecuteRequest<TRequest, TResponse>(IRequest<TRequest, TResponse> request)
         {
             var worker = _workers.OfType<IHandle<TRequest, TResponse>>().FirstOrDefault();
 
@@ -26,10 +26,10 @@ namespace AB.AppEngine
             {
                 return worker.Process(request);
             }
-            return new TResponse();
+            return default(TResponse);
         }
 
-        private void NotifyRequestSinks<TRequest, TResponse>(IRequest<TRequest, TResponse> request) where TResponse : new()
+        private void NotifyRequestSinks<TRequest, TResponse>(IRequest<TRequest, TResponse> request)
         {
             foreach (var sink in _requestSinks)
             {
@@ -42,7 +42,7 @@ namespace AB.AppEngine
             _requestSinks.Add(sink);
         }
 
-        public void RegisterWorker<TRequest, TResponse>(IHandle<TRequest, TResponse> worker) where TResponse : new()
+        public void RegisterWorker<TRequest, TResponse>(IHandle<TRequest, TResponse> worker)
         {
             if (_workers.OfType<IHandle<TRequest, TResponse>>().Any())
                 throw new WorkerForGivenPairAlreadyExistException();

@@ -1,6 +1,6 @@
 ﻿namespace AppEngine.Base
 {
-    public interface IHandle<TRequest,TResponse> where TResponse : new()
+    public interface IHandle<TRequest,TResponse>
     {
         TResponse Process(IRequest<TRequest, TResponse> request);
     }

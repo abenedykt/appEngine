@@ -22,7 +22,7 @@ namespace AppEngine.Tests
             var request = new RequestTest();
             TestResponse response = null;
             Assert.DoesNotThrow(()=>response = _appEngine.Execute(request));
-            response.Should().NotBeNull();
+            response.Should().BeNull();
         }
 
         [Fact]
@@ -35,15 +35,6 @@ namespace AppEngine.Tests
             _appEngine.Execute(testRequest);
 
             testSink.Received().OnIncomingRequest(testRequest);
-        }
-
-        [Fact]
-        public void When_request_is_send_it_should_return_proper_response()
-        {
-            var request = new RequestTest();
-            var response = _appEngine.Execute(request);
-            response.Should().BeAssignableTo<TestResponse>();
-            response.Id.Should().Be(0);
         }
 
         [Fact]

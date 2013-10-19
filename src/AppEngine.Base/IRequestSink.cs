@@ -2,6 +2,6 @@
 {
     public interface IRequestSink
     {
-        void OnIncomingRequest<TRequest,TResponse>(IRequest<TRequest, TResponse> request) where TResponse : new();
+        void OnIncomingRequest<TRequest,TResponse>(IRequest<TRequest, TResponse> request);
     }
 }
