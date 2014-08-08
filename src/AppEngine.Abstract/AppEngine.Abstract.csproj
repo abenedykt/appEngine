@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorkerBase.cs" />
     <Compile Include="IApplicationEngine.cs" />
     <Compile Include="IHandle.cs" />
     <Compile Include="IRequest.cs" />
