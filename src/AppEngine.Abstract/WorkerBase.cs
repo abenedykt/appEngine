@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppEngine.Base
+﻿namespace AB.AppEngine.Abstract
 {
 	public abstract class WorkerBase<TRequest, TResponse> : IHandle<TRequest, TResponse>
 	{
