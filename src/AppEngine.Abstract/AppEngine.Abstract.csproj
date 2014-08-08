@@ -7,7 +7,7 @@
     <ProjectGuid>{EDE6954D-06EA-48C9-B85F-EED0D4D73AC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AppEngine.Base</RootNamespace>
+    <RootNamespace>AB.AppEngine.Abstract</RootNamespace>
     <AssemblyName>AppEngine.Base</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

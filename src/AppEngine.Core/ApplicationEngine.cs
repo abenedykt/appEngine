@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AB.AppEngine.Exceptions;
-using AppEngine.Base;
+using AB.AppEngine.Abstract;
+using AB.AppEngine.Core.Exceptions;
 
-namespace AB.AppEngine
+namespace AB.AppEngine.Core
 {
     public class ApplicationEngine : IApplicationEngine
     {
@@ -45,7 +45,7 @@ namespace AB.AppEngine
         public void RegisterWorker<TRequest, TResponse>(IHandle<TRequest, TResponse> worker)
         {
             if (_workers.OfType<IHandle<TRequest, TResponse>>().Any())
-                throw new WorkerForGivenPairAlreadyExistException();
+                throw new WorkerForGivenPairAlreadyExist();
 
             _workers.Add(worker);
         }

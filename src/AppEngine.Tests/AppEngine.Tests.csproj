@@ -58,13 +58,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppEngine.Base\AppEngine.Base.csproj">
-      <Project>{EDE6954D-06EA-48C9-B85F-EED0D4D73AC6}</Project>
-      <Name>AppEngine.Base</Name>
+    <ProjectReference Include="..\AppEngine.Abstract\AppEngine.Abstract.csproj">
+      <Project>{ede6954d-06ea-48c9-b85f-eed0d4d73ac6}</Project>
+      <Name>AppEngine.Abstract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AppEngine\AppEngine.csproj">
-      <Project>{8A588955-E8A8-49EB-9DC7-47D729506A5F}</Project>
-      <Name>AppEngine</Name>
+    <ProjectReference Include="..\AppEngine.Core\AppEngine.Core.csproj">
+      <Project>{bd0913a3-941e-4226-833c-e6be6e3554d6}</Project>
+      <Name>AppEngine.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

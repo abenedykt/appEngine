@@ -1,6 +1,6 @@
-﻿using AB.AppEngine;
-using AB.AppEngine.Exceptions;
-using AppEngine.Base;
+﻿using AB.AppEngine.Abstract;
+using AB.AppEngine.Core;
+using AB.AppEngine.Core.Exceptions;
 using FluentAssertions;
 using NSubstitute;
 using Xunit;
@@ -58,7 +58,7 @@ namespace AppEngine.Tests
             var testWorker2 = Substitute.For<IHandle<RequestTest, TestResponse>>();
 
             _appEngine.RegisterWorker(testWorker1);
-            Assert.Throws<WorkerForGivenPairAlreadyExistException>(()=>_appEngine.RegisterWorker(testWorker2));
+            Assert.Throws<WorkerForGivenPairAlreadyExist>(()=>_appEngine.RegisterWorker(testWorker2));
         }
 
         [Fact]

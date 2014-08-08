@@ -7,7 +7,7 @@
     <ProjectGuid>{BD0913A3-941E-4226-833C-E6BE6E3554D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AB.AppEngine</RootNamespace>
+    <RootNamespace>AB.AppEngine.Core</RootNamespace>
     <AssemblyName>AppEngine</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -41,13 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEngine.cs" />
-    <Compile Include="Exceptions\WorkerForGivenPairAlreadyExistException.cs" />
+    <Compile Include="Exceptions\WorkerForGivenPairAlreadyExist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppEngine.Base\AppEngine.Base.csproj">
+    <ProjectReference Include="..\AppEngine.Abstract\AppEngine.Abstract.csproj">
       <Project>{EDE6954D-06EA-48C9-B85F-EED0D4D73AC6}</Project>
-      <Name>AppEngine.Base</Name>
+      <Name>AppEngine.Abstract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
