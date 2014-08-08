@@ -3,10 +3,13 @@ appEngine
 
 appEngine - simple dispatcher for request
 
-
+initialize appengine and register workers
+```
 var app = new ApplicationEngine();
 app.RegisterWorker(workerThatWillHandleTheRequest);
+```
 
+and you're ready to go
 ```
 //and now you can just
 
