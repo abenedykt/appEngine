@@ -1,7 +1,6 @@
-appEngine
+appEngine [![Build status](https://ci.appveyor.com/api/projects/status/jjwqq5d936xnt9rf)](https://ci.appveyor.com/project/abenedykt/appengine)
 =========
 
-[![Build status](https://ci.appveyor.com/api/projects/status/jjwqq5d936xnt9rf)](https://ci.appveyor.com/project/abenedykt/appengine)
 appEngine - simple dispatcher for request
 
 initialize appengine and register workers
