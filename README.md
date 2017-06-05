@@ -27,7 +27,7 @@ appEngine will send request to the Worker that knows how to handle the request a
 
 All the magic is created with just 2 interfaces:
 
-1) Marker Interface for Request
+1) Mark Interface for Request
   
 ```  
 public interface IRequest<TRequest, TResponse>{} 
