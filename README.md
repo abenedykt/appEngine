@@ -1,4 +1,4 @@
-appEngine [![Build status](https://ci.appveyor.com/api/projects/status/jjwqq5d936xnt9rf)](https://ci.appveyor.com/project/abenedykt/appengine)
+appEngine [![Build status](https://ci.appveyor.com/api/projects/status/x2o3v19o2mu39121/branch/master?svg=true)](https://ci.appveyor.com/project/abenedykt/appengine)
 =========
 
 appEngine - simple dispatcher for request
