@@ -1,4 +1,4 @@
-﻿namespace AB.AppEngine.Abstract
+﻿namespace AppEngine.Abstract
 {
     public interface IRequestSink
     {

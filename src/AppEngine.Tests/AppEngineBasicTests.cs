@@ -1,6 +1,6 @@
-﻿using AB.AppEngine.Abstract;
-using AB.AppEngine.Core;
-using AB.AppEngine.Core.Exceptions;
+﻿using AppEngine.Abstract;
+using AppEngine.Core;
+using AppEngine.Core.Exceptions;
 using FluentAssertions;
 using NSubstitute;
 using Xunit;
@@ -20,8 +20,7 @@ namespace AppEngine.Tests
         public void When_executing_request_that_has_no_corresponding_worker_it_returns_empty_response()
         {
             var request = new RequestTest();
-            TestResponse response = null;
-            Assert.DoesNotThrow(()=>response = _appEngine.Execute(request));
+            var response = _appEngine.Execute(request);
             response.Should().BeNull();
         }
 
@@ -68,10 +67,8 @@ namespace AppEngine.Tests
             var testWorker2 = Substitute.For<IHandle<RequestTest, OtherTestResponse>>();
 
             _appEngine.RegisterWorker(testWorker1);
-            Assert.DoesNotThrow(() => _appEngine.RegisterWorker(testWorker2));
-
+            _appEngine.RegisterWorker(testWorker2);
         }
-
 
         public class TestWorker : IHandle<RequestTest, TestResponse>
         {

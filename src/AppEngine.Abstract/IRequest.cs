@@ -1,4 +1,4 @@
-﻿namespace AB.AppEngine.Abstract
+﻿namespace AppEngine.Abstract
 {
     // ReSharper disable UnusedTypeParameter
     public interface IRequest<TRequest, TResponse>{}

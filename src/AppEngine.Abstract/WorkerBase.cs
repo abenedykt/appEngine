@@ -1,4 +1,4 @@
-﻿namespace AB.AppEngine.Abstract
+﻿namespace AppEngine.Abstract
 {
 	public abstract class WorkerBase<TRequest, TResponse> : IHandle<TRequest, TResponse>
 	{

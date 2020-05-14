@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
-using AB.AppEngine.Abstract;
-using AB.AppEngine.Core.Exceptions;
+using AppEngine.Abstract;
+using AppEngine.Core.Exceptions;
 
-namespace AB.AppEngine.Core
+namespace AppEngine.Core
 {
     public class ApplicationEngine : IApplicationEngine
     {
         private readonly IList<IRequestSink> _requestSinks = new List<IRequestSink>();
-        private readonly IList<object> _workers = new SynchronizedCollection<object>();
+        private readonly ConcurrentBag<object> _workers = new ConcurrentBag<object>();
 
         public TResponse Execute<TRequest, TResponse>(IRequest<TRequest, TResponse> request)
         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AB.AppEngine.Core.Exceptions
+namespace AppEngine.Core.Exceptions
 {
     public class WorkerForGivenPairAlreadyExist : Exception
     {
